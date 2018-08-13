@@ -1,0 +1,29 @@
+body{
+  background: url("./img/rm.png") scroll;
+
+}
+
+/*n to usando*/
+.bg{
+
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+
+}
+.logo{
+  background: url("./img/logo.png");
+}
+
+.header {
+  background:#263B60 url("./img/logo.png") 50% 0 no-repeat ;
+  height: 175px;
+  width: 100%;
+  padding: 20px;
+
+}
