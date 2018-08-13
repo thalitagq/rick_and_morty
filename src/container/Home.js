@@ -2,28 +2,43 @@ import React, { Component } from 'react';
 import CharacterCard from '../components/CharacterCard';
 
 class Home extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            characters: []
-        };
+
+    state = {
+        characters: []
     }
 
     componentDidMount(){
-        this.getItems();
+        return fetch('https://rickandmortyapi.com/api/character/?page=2')
+        .then((data) => data.json())
+        .then((dataJson) => {
+            this.setState({characters: dataJson.results})
+            console.log('did');
+            console.log(this.state.characters);
+        });
+
     }
 
-    getItems(){
-        fetch('https://rickandmortyapi.com/api/character/')
-          .then(results => results.json())
-          .then(results =>this.setState({characters: results}));//console.log(results));
-    }
+    getCharacter(i){
+        return fetch('https://rickandmortyapi.com/api/character/?page='+i)
+        .then((data) => data.json())
+        .then((dataJson) => {
+            this.setState({characters: dataJson.results})
+            console.log(this.state.characters);
+        });
+
+    };
+
 
 
     render() {
-
+        let c = this.state.characters[0];
         return (
-            null
+
+            <div className = "container">
+                <div className = "row">
+                    <CharacterCard character = {c}/>
+                </div>
+            </div>
         )
 
   }

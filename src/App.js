@@ -3,8 +3,8 @@ import './App.css';
 
 import Header from './components/Header';
 import NavBar from './components/NavBar';
-import Pagination from './components/Pagination';
 
+import Home from './container/Home';
 import Characters from './components/Characters';
 
 
@@ -33,8 +33,8 @@ class App extends Component {
         <div>
             <Header/>
             <NavBar getCharacter = {this.getCharacter}/>
-            <Characters characters = {this.state.characters}/>
-            
+            <Home/>
+
         </div>
         );
       }
