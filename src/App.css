@@ -1,6 +1,6 @@
 body{
-  background: url("./img/rm.png") scroll;
-
+    background: url("./img/rm.png");
+''''background-attachment: scroll;
 }
 
 /*n to usando*/
@@ -26,4 +26,13 @@ body{
   width: 100%;
   padding: 20px;
 
+}
+
+.active-character{
+  margin: 0 auto;
+  width: 60%;
+}
+
+.active-character-img {
+  height: 415px !important;
 }

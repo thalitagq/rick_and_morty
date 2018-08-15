@@ -11,7 +11,7 @@ const Characters = props => (
                     <div key = {character.id} className = "col-md-4" >
                         <div className="card" style={{width: "18rem",  margin:"15px", background:"#263B60"}}>
                           <img className="card-img-top" src={character.image} alt={character.name}/>
-                          <div className="card-body" style={{background:"#b8db4f"}}>
+                          <div className="card-body" >
                             <h5 className="card-title" >{character.name}</h5>
                           </div>
                           <ul className="list-group list-group-flush">
